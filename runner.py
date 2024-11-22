@@ -76,7 +76,7 @@ for filename in filename_list:
     # generate frames
 
     logger.info("BEGIN FRAME SUMMARY PROCESS")
-    all_frames = {id: {'best_frame': '', 'candidate_frames': []}}
+    all_frames = {id: {'best_frame': '', 'candidate_frames': []} for id in text_claims['claim_ids']}
     
     for k in range(len(text_claims['claim_ids'])):
         claim_description = text_claims['claims'][k]
